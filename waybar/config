@@ -1,0 +1,37 @@
+{
+	"layer": "top",
+	"position": "top",
+	"spacing": 4,
+
+	"include": [
+		"~/.config/waybar/modules.json"
+	],
+
+
+	"modules-left" : [
+		"hyprland/workspaces"
+	],
+
+	"modules-center" : [
+		"clock"
+	],
+
+	"modules-right": [
+        "keyboard-state",
+		"pulseaudio",
+        "network",
+		"group/hardware",
+        "temperature",
+        "battery",
+		"custom/exit"
+	],
+
+	"group/hardware": {
+		"orientation": "horizontal",
+		"modules": [
+			"disk",
+			"cpu",
+			"memory"
+		]
+	}
+}
