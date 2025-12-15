@@ -6,7 +6,7 @@ return {
   -- A list of parser names, or "all" (the listed parsers MUST always be installed)
   ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "markdown", "markdown_inline",
     -- Own
-    "go", "python", "javascript", "bash"
+    "go", "python", "javascript", "bash", "typescript"
   },
 
   sync_install = false,
@@ -17,7 +17,7 @@ return {
     enable = true,
 
     -- list of language that will be disabled
-    disable = { "c", "rust" },
+    disable = { "c"},
     -- Or use a function for more flexibility, e.g. to disable slow treesitter highlight for large files
     disable = function(lang, buf)
         local max_filesize = 100 * 1024 -- 100 KB

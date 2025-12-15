@@ -1,6 +1,7 @@
 {
 	"layer": "top",
 	"position": "top",
+    "output":["DP-3"],
 	"spacing": 4,
 
 	"include": [

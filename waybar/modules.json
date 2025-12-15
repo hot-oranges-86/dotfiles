@@ -6,8 +6,9 @@
         "all-outputs": true,
         "format": "{}",
         "persistent-workspaces": {
-             "*": 2
-        }       
+        "HDMI-A-1": [1, 2],
+        "DP-3": [3, 4]
+        }      
     },
 
     // Hyprland Window
@@ -110,7 +111,7 @@
     "custom/exit": {
         "format": " ",
         "tooltip-format": "Powermenu",
-        "on-click": "wlogout -b 4",
+        "on-click": "wlogout -b 3",
         "tooltip": false
     }
 }
