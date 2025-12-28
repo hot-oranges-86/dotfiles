@@ -18,13 +18,22 @@
 
     // Hardware
     "cpu": {
-	"format": "{usage}%  "
+        "interval": "30",
+    	"format": "{usage}%  "
+    },
+    "disk": {
+        "interval": "60",
+        "path": "/home",
+        "format": "{}% ",
+        "tooltip-format": "{used} out of {total}"
     },
     "memory": {
-        "format": "/ M {}% "
+        "interval": "30",        
+        "format": "{}% "
     },
 
     "temperature": {
+        "interval": "15",
         "format": "{temperatureC}°C"
     },
 
