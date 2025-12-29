@@ -34,13 +34,14 @@
 
     "temperature": {
         "interval": "15",
-        "format": "{temperatureC}°C"
+        "format": "{temperatureC}°C",
+        "tooltip-format" : "false"
     },
 
 
     // Keyboard
     "keyboard-state": {
-        "numlock": true,
+        "numlock": false,
         "capslock": true,
         "format": "{name} {icon}",
         "format-icons": {
