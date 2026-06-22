@@ -122,5 +122,11 @@
     "tooltip-format": "Powermenu",
     "on-click": "wlogout -b 3",
     "tooltip": false
+  },
+  // Check for updates
+  "custom/updates": {
+    "exec": "~/.config/waybar/scripts/updates.sh",
+    "interval": 600,
+    "format": "{} "
   }
 }
