@@ -16,8 +16,19 @@ return {
 
     config = function()
         require("conform").setup({
-            formatters_by_ft = {}
-        })
+            formatters_by_ft = {
+                javascript = { "prettier" },
+                javascriptreact = { "prettier" },
+                typescript = { "prettier" },
+                typescriptreact = { "prettier" },
+                html = { "prettier" },
+                css = { "prettier" },
+                scss = { "prettier" },
+                json = { "prettier" },
+                markdown = { "prettier" },
+    },
+    format_on_save = true,
+})
 
         local cmp = require("cmp")
         local cmp_lsp = require("cmp_nvim_lsp")
