@@ -1,127 +1,126 @@
 {
-    // Workspaces
-    "hyprland/workspaces" : {
-        "on-click": "activate",
-        "active-only": false,
-        "all-outputs": true,
-        "format": "{}",
-        "persistent-workspaces": {
-        "HDMI-A-1": [1, 2],
-        "DP-3": [3, 4]
-        }      
-    },
-
-    // Hyprland Window
-    "hyprland/window": {
-        "separate-outputs": true
-    },
-
-    // Hardware
-    "cpu": {
-        "interval": "30",
-    	"format": "{usage}%  "
-    },
-    "disk": {
-        "interval": "60",
-        "path": "/home",
-        "format": "{}% ",
-        "tooltip-format": "{used} out of {total}"
-    },
-    "memory": {
-        "interval": "30",        
-        "format": "{}% "
-    },
-
-    "temperature": {
-        "interval": "15",
-        "format": "{temperatureC}°C",
-        "tooltip-format" : "false"
-    },
-
-
-    // Keyboard
-    "keyboard-state": {
-        "numlock": false,
-        "capslock": true,
-        "format": "{name} {icon}",
-        "format-icons": {
-            "locked": " ",
-            "unlocked": " "
-        }
-    },
-
-    // Clock
-    "clock": {
-        "format": "{:%a %d %B %H:%M}",
-        "tooltip": false
-    },
-
-    // Bluetooth
-    "bluetooth": {
-        "format-disabled": "",
-        "format-off": "",
-        "interval": 30,
-        "on-click": "blueman-manager",
-        "format-no-controller": ""
-    },
-
-    // User
-    "user": {
-        "format": "{user}",
-        "interval": 60,
-        "icon": false,
-    },
-
-    // Sound
-    "pulseaudio": {
-        "format": "{volume}% {icon} {format_source}",
-        "format-bluetooth": "{volume}% {icon} {format_source}",
-        "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": " {format_source}",
-        "format-source": "{volume}%  ",
-        "format-source-muted": " ",
-        "format-icons": {
-            "headphone": " ",
-            "hands-free": " ",
-            "headset": " ",
-            "phone": " ",
-            "portable": " ",
-            "car": " ",
-            "default": ["", " ", " "]
-        },
-        "on-click": "pavucontrol"
-    },
-
-    // Battery
-    "battery": {
-        "states": {
-            // "good": 95,
-            "warning": 30,
-            "critical": 15
-        },
-        "format": "{icon}   {capacity}%",
-        "format-charging": "  {capacity}%",
-        "format-plugged": "  {capacity}%",
-        "format-alt": "{icon}  {time}",
-        // "format-good": "", // An empty format will hide the module
-        // "format-full": "",
-        "format-icons": [" ", " ", " ", " ", " "]
-    },
-
-    // Network
-    "network": {
-        "format-wifi": "  {signalStrength}%",
-        "format-ethernet": " ",
-        "format-disconnected": " Disconnected",
-        "interval": 5,
-        "tooltip": false
-    },
-
-    // Shut off
-    "custom/exit": {
-        "format": " ",
-        "tooltip-format": "Powermenu",
-        "on-click": "wlogout -b 3",
-        "tooltip": false
+  // Workspaces
+  "hyprland/workspaces": {
+    "on-click": "activate",
+    "active-only": false,
+    "all-outputs": true,
+    "format": "{}",
+    "persistent-workspaces": {
+      "HDMI-A-2": [1, 2],
+      "DP-2": [3, 4]
     }
+  },
+
+  // Hyprland Window
+  "hyprland/window": {
+    "separate-outputs": true
+  },
+
+  // Hardware
+  "cpu": {
+    "interval": "30",
+    "format": "{usage}%  "
+  },
+  "disk": {
+    "interval": "60",
+    "path": "/home",
+    "format": "{}% ",
+    "tooltip-format": "{used} out of {total}"
+  },
+  "memory": {
+    "interval": "30",
+    "format": "{}% "
+  },
+
+  "temperature": {
+    "interval": "15",
+    "format": "{temperatureC}°C",
+    "tooltip-format": "false"
+  },
+
+  // Keyboard
+  "keyboard-state": {
+    "numlock": false,
+    "capslock": true,
+    "format": "{name} {icon}",
+    "format-icons": {
+      "locked": " ",
+      "unlocked": " "
+    }
+  },
+
+  // Clock
+  "clock": {
+    "format": "{:%a %d %B %H:%M}",
+    "tooltip": false
+  },
+
+  // Bluetooth
+  "bluetooth": {
+    "format-disabled": "",
+    "format-off": "",
+    "interval": 30,
+    "on-click": "blueman-manager",
+    "format-no-controller": ""
+  },
+
+  // User
+  "user": {
+    "format": "{user}",
+    "interval": 60,
+    "icon": false
+  },
+
+  // Sound
+  "pulseaudio": {
+    "format": "{volume}% {icon} {format_source}",
+    "format-bluetooth": "{volume}% {icon} {format_source}",
+    "format-bluetooth-muted": " {icon} {format_source}",
+    "format-muted": " {format_source}",
+    "format-source": "{volume}%  ",
+    "format-source-muted": " ",
+    "format-icons": {
+      "headphone": " ",
+      "hands-free": " ",
+      "headset": " ",
+      "phone": " ",
+      "portable": " ",
+      "car": " ",
+      "default": ["", " ", " "]
+    },
+    "on-click": "pavucontrol"
+  },
+
+  // Battery
+  "battery": {
+    "states": {
+      // "good": 95,
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{icon}   {capacity}%",
+    "format-charging": "  {capacity}%",
+    "format-plugged": "  {capacity}%",
+    "format-alt": "{icon}  {time}",
+    // "format-good": "", // An empty format will hide the module
+    // "format-full": "",
+    "format-icons": [" ", " ", " ", " ", " "]
+  },
+
+  // Network
+  "network": {
+    "format-wifi": "  {signalStrength}%",
+    "format-ethernet": " ",
+    "format-disconnected": " Disconnected",
+    "interval": 5,
+    "tooltip": false
+  },
+
+  // Shut off
+  "custom/exit": {
+    "format": " ",
+    "tooltip-format": "Powermenu",
+    "on-click": "wlogout -b 3",
+    "tooltip": false
+  }
 }

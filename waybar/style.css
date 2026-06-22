@@ -1,58 +1,56 @@
-
 /* General */
 
 * {
-    font-family:  Roboto;
-    font-size: 16px;
-    border: none;
-    border-radius: 0px;
-    color: white;
-    padding: 0px;
-    margin: 0px 4px;
+  font-family: Roboto;
+  font-size: 16px;
+  border: none;
+  border-radius: 0px;
+  color: white;
+  padding: 0px;
+  margin: 0px 4px;
 }
 
 window#waybar {
-    background: transparent;
-    border: 0px;
+  background: transparent;
+  border: 0px;
 }
 
 /* Workspaces */
 #workspaces {
-    margin: 8px;
-    font-style: normal;
+  margin: 8px;
+  font-style: normal;
 }
 
 #workspaces button {
-    padding: 0px 5px;
-    margin: 2px 4px;
-    border-radius: 16px;
-    color: #2f354a;
-    background-color: #2f354a;
-    transition: all 0.2s ease-in-out;
+  padding: 0px 5px;
+  margin: 2px 4px;
+  border-radius: 16px;
+  color: #2f354a;
+  background-color: #2f354a;
+  transition: all 0.2s ease-in-out;
 }
 
 #workspaces button.active {
-    color: #cdd6f4;
-    background-color: #cdd6f4;
-    border-radius: 16px;
-    min-width: 40px;
-    background-size: 400% 400%;
-    transition: all 0.2s ease-in-out;
+  color: #cdd6f4;
+  background-color: #cdd6f4;
+  border-radius: 16px;
+  min-width: 40px;
+  background-size: 400% 400%;
+  transition: all 0.2s ease-in-out;
 }
 
 #workspaces button:hover {
-    background-color: transparent;
-    color: transparent;
-    border-radius: 16px;
-    min-width: 30px;
-    background-size: 400% 400%;
+  background-color: transparent;
+  color: transparent;
+  border-radius: 16px;
+  min-width: 30px;
+  background-size: 400% 400%;
 }
 
 /* pulseaudio */
 #pulseaudio {
-    
 }
 
 #pulseaudio.muted {
-    color: red;
+  color: red;
 }
