@@ -1,36 +1,71 @@
 return {
-    { 
-    "nvim-treesitter/nvim-treesitter",
-    branch = "master",
-    config = function()
-		require'nvim-treesitter.configs'.setup {
-  -- A list of parser names, or "all" (the listed parsers MUST always be installed)
-  ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "markdown", "markdown_inline",
-    -- Own
-    "go", "python", "javascript", "bash", "typescript", "css"
-  },
+	{
+		"nvim-treesitter/nvim-treesitter",
+		build = ":TSUpdate",
+		lazy = false,
+		init = function()
+			local parsers = {
+				"lua",
+				"vim",
+				"vimdoc",
+				"query",
+                "bash",
+                "zsh",
 
-  sync_install = false,
+				"javascript",
+				"typescript",
+                "jsx",
+				"tsx",
+				"html",
+				"css",
+				"json",
 
-  auto_install = true,
+				"gitignore",
+                "markdown",
+                "markdown_inline",
 
-  highlight = {
-    enable = true,
+                "python",
+                "c",
 
-    -- list of language that will be disabled
-    disable = { "c"},
-    -- Or use a function for more flexibility, e.g. to disable slow treesitter highlight for large files
-    disable = function(lang, buf)
-        local max_filesize = 100 * 1024 -- 100 KB
-        local ok, stats = pcall(vim.loop.fs_stat, vim.api.nvim_buf_get_name(buf))
-        if ok and stats and stats.size > max_filesize then
-            return true
-        end
-    end,
+				"go",
+			}
 
-    additional_vim_regex_highlighting = false,
-		    },
-		}
-    end	
-	}
+			local group = vim.api.nvim_create_augroup("treesitter-autocmds", { clear = true })
+			vim.api.nvim_create_autocmd({ "BufEnter", "FileType" }, {
+				group = group,
+				callback = function()
+					if vim.bo.buftype ~= "" then
+						return
+					end
+
+					pcall(vim.treesitter.start, 0)
+				end,
+			})
+
+			vim.api.nvim_create_autocmd("User", {
+				group = group,
+				pattern = "VeryLazy",
+				once = true,
+				callback = function()
+					require("nvim-treesitter").install(parsers)
+				end,
+			})
+		end,
+	},
+	{
+		"nvim-treesitter/nvim-treesitter-textobjects",
+		lazy = false,
+		config = function()
+			require("nvim-treesitter-textobjects").setup({
+				select = {
+					enable = true,
+					lookahead = true,
+					keymaps = {
+						["af"] = "@function.outer",
+						["if"] = "@function.inner",
+					},
+				},
+			})
+		end,
+	},
 }

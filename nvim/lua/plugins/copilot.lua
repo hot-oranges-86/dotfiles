@@ -5,11 +5,19 @@ return {
     require("copilot").setup({
       suggestion = {
         enabled = true,
-        auto_trigger = true,
+        auto_trigger = false,
+        trigger_on_accept = true,
       },
       panel = {
-        enabled = true,
+        enabled = false,
       },
+      keymap = {
+          accept = "<M-l>",
+          accept_word = false,
+          accept_line = false,
+          next = "<M-]>",
+          prev = "<M-[>",
+    },
 
       filetypes = {
         javascript = true,
