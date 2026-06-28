@@ -126,6 +126,7 @@
   // Check for updates
   "custom/updates": {
     "exec": "~/.config/waybar/scripts/updates.sh",
+    "on-click": "~/.config/waybar/scripts/updates.sh",
     "interval": 600,
     "format": "{} "
   }
