@@ -1,34 +1,26 @@
 hl.workspace_rule({
-    name = "workspace-1-hdmi",
-    match = { workspace = "1" },
-
+    workspace = "1",
     monitor    = "HDMI-A-2",
     border_size = 0,
-    rounding   = false,
+    no_rounding = true,
     gaps_out   = 0,
 })
 
 hl.workspace_rule({
-    name = "workspace-2-hdmi",
-    match = { workspace = "2" },
-
+    workspace = "2",
     monitor    = "HDMI-A-2",
     border_size = 0,
-    rounding   = false,
+    no_rounding = true,
     gaps_out   = 0,
 })
 
 hl.workspace_rule({
-    name = "workspace-3-dp",
-    match = { workspace = "3" },
-
+    workspace = "3",
     monitor = "DP-2",
 })
 
 hl.workspace_rule({
-    name = "workspace-4-dp",
-    match = { workspace = "4" },
-
+    workspace = "4",
     monitor = "DP-2",
 })
 
