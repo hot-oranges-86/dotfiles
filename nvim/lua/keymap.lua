@@ -17,3 +17,20 @@ vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 vim.api.nvim_set_keymap('n', '<C-s>', ':w<CR>', { noremap = true, silent = false })
 
 vim.api.nvim_set_keymap('i', '<C-s>', '<Esc>:w<CR>', { noremap = true, silent = true })
+
+vim.keymap.set("n", "<leader>l", vim.diagnostic.open_float, {
+    desc = "Show diagnostics",
+})
+
+vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, {
+    desc = "Previous diagnostic",
+})
+
+vim.keymap.set("n", "]d", vim.diagnostic.goto_next, {
+    desc = "Next diagnostic",
+})
+
+vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, {
+    desc = "Diagnostics to location list",
+
+})
