@@ -39,6 +39,9 @@ hl.bind(mainMod .. " + F5", hl.dsp.exec_cmd("ddcutil --display 1 setvcp 10 7"))
 hl.bind(mainMod .. " + F6", hl.dsp.exec_cmd("ddcutil --display 1 setvcp 10 30"))
 hl.bind(mainMod .. " + F7", hl.dsp.exec_cmd("ddcutil --display 1 setvcp 10 80"))
 
+hl.bind(mainMod .. " + SHIFT + F5", hl.dsp.exec_cmd("ddcutil --display 2 --noverify setvcp 12 7"))
+hl.bind(mainMod .. " + SHIFT + F6", hl.dsp.exec_cmd("ddcutil --display 2 --noverify setvcp 12 30"))
+hl.bind(mainMod .. " + SHIFT + F7", hl.dsp.exec_cmd("ddcutil --display 2 --noverify setvcp 12 80"))
 
 -- Screenshots
 
